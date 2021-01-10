@@ -26,7 +26,7 @@ namespace QrLabel
             DependencyProperty.Register(
             "QrUrl", typeof(string),
             typeof(QrControl),
-            new FrameworkPropertyMetadata(false,
+            new FrameworkPropertyMetadata(string.Empty,
                 FrameworkPropertyMetadataOptions.AffectsRender,
                 (o, e) => ((QrControl)o).OnIsUrlChanged()));
 
