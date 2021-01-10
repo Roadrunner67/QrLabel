@@ -21,11 +21,11 @@ namespace QrLabel
 
         private void SetUserControl_Click(object sender, RoutedEventArgs e)
         {
-            TestQr.Url = UrlText.Text;
+            TestQr.QrUrl = UrlText.Text;
         }
         private void SetViewModel_Click(object sender, RoutedEventArgs e)
         {
-            TestQr.Url = UrlText.Text;
+            _vm.Url = UrlText.Text;
         }
         
     }

@@ -1,7 +1,5 @@
 ﻿using QRCoder;
 
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -18,7 +16,7 @@ namespace QrLabel
             InitializeComponent();
         }
 
-        public string Url
+        public string QrUrl
         {
             get => (string)GetValue(UrlProperty);
             set => SetValue(UrlProperty, value);            
@@ -26,7 +24,7 @@ namespace QrLabel
 
         public static readonly DependencyProperty UrlProperty =
             DependencyProperty.Register(
-            "Url", typeof(string),
+            "QrUrl", typeof(string),
             typeof(QrControl),
             new FrameworkPropertyMetadata(false,
                 FrameworkPropertyMetadataOptions.AffectsRender,
@@ -36,7 +34,7 @@ namespace QrLabel
         {
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(
-                Url,
+                QrUrl,
                 QRCodeGenerator.ECCLevel.Q,
                 true,
                 true,

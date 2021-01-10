@@ -24,7 +24,7 @@
         <local:QrControl x:Name="TestQr" Grid.Row="3" Grid.ColumnSpan="2"
                                     HorizontalAlignment="Center" Height="100" 
                                     VerticalAlignment="Center" Width="100" 
-                                    Url="{Binding Url}">
+                                    QrUrl="{Binding Url}">
         </local:QrControl>
 
     </Grid>
